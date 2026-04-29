@@ -4,7 +4,7 @@ console.log(title);
 
 title.textContent = 'Web Page Components';
 
-document.querySelector('#topics').style.color = 'red';
+document.querySelector('#topics').style.color = 'purple';
 
 const wrapper = document.getElementById('content');
 
