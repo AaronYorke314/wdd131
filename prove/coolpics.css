@@ -24,7 +24,6 @@ main {
     padding: 0;
     grid-template-columns: 1fr;
     background-color: gray;
-    
 }
 
 a {
@@ -65,7 +64,6 @@ img {
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
 }
-
 
 @media (min-width: 600px) {
     main {
