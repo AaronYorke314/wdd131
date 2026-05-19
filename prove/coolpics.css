@@ -1,3 +1,90 @@
-header {
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+
+header, footer {
+    margin: 0;
+    padding: 0;
     text-align: center;
+    background-color: blue;
+}
+
+body, html, h1, h2{
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    background-color: grey;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 1fr;
+    background-color: gray;
+    
+}
+
+a {
+    margin: 3px;
+    color: white;
+}
+
+img {
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    border: 5px solid white;
+}
+
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+    transition: .4s;
+}
+
+.hide {
+    display: none;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+
+@media (min-width: 600px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hide {
+        display: block;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+}
+
+@media (min-width: 1000px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
