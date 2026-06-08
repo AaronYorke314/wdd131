@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secret Event Ticket</title>
+  <link rel="icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="eventform.css" />
+  <script src="form.js" defer></script>
+</head>
+<body>
+  <main class="wrapper">
+    <h1>Event Ticket</h1>
+
+    <form id="fsyForm">
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" required />
+      </div>
+
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" required />
+      </div>
+
+      <div class="field full">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+      </div>
+
+      <div class="field">
+        <label for="travelRange">Type</label>
+        <select
+          id="travelRange"
+          name="travelRange"
+          aria-controls="notesContainer"
+          required
+        >
+          <option value="">Choose one</option>
+          <option value="student">Student</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="EventDate">Event Date</label>
+        <input id="EventDate" name="EventDate" type="date" required />
+      </div>
+
+      <div id="IDContainer" class="field full" hidden>
+        <label for="student">Student I#</label>
+        <input id="student" name="student" type="text" pattern="^\d{9}$"/>
+      </div>
+
+      <button class="full" type="submit">Create Ticket</button>
+    </form>
+
+    <section id="output" aria-live="polite"></section>
+  </main>
+</body>
+</html>
+          
