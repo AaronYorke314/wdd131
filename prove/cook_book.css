@@ -1,0 +1,35 @@
+.cook {
+    display: flex;
+}
+
+.n {
+    width: 25px;
+}
+
+.ap {
+    width: 400px;
+}
+
+.book {
+    width: 50px;
+}
+
+.titles {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 50px;
+}
+
+.search {
+    display: flex;
+    align-content: space-between;
+    
+}
+
+.nn {
+    width: 20px;
+    justify-self: right;
+    align-content: space-between;
+}
