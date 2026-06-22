@@ -1,0 +1,57 @@
+#info {
+    text-align: right;
+    padding-right: 15px;
+    border-top: 2px solid orange;
+}
+
+#bigbox {
+    justify-content: center;
+    padding: 25px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: red;
+}
+
+h3 {
+    border-top: 2px solid orange;
+}
+
+#navi {
+    border-bottom: 2px solid orange;
+    border-top: 2px solid orange;
+    padding: 15px;
+    text-align: right;
+    color: red;
+    
+}
+
+a {
+    padding: 5px;
+}
+
+#book {
+    padding-left: 15px;
+}
+
+img {
+    margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+    #bigbox {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 50px;
+    }
+
+    #info {
+    padding-right: 15px;
+    border-top: none;
+    border-right: 2px solid orange;
+    }
+}
