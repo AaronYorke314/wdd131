@@ -16,7 +16,7 @@ let myList = document.querySelector('#myList');
 
 const stepsHtml = steps.map(listTemplate);
 
-function listTemplate(x) {
+function listTemplate(item) {
     return `<li>${item}</li>`;
 };
 
