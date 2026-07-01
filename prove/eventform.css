@@ -1,7 +1,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background:  #cfe0cf;
+  background:  blue;
   margin: 0;
 }
 
@@ -43,7 +43,7 @@ button {
 }
 
 button:hover {
-  background: #dcead9;
+  background: green;
 }
 
 .campus-group {
@@ -73,7 +73,11 @@ button:hover {
 .campus-grid input {
   margin-right: 0.5rem;
 }
-#notesContainer[hidden] {
+#IDContainer[hidden] {
+  display: none;
+}
+
+#PContainer[hidden] {
   display: none;
 }
 

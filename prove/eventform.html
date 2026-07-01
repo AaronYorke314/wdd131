@@ -5,9 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Secret Event Ticket</title>
-  <link rel="icon" href="images/favicon.ico">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="eventform.css" />
-  <script src="form.js" defer></script>
+  <script src="eventform.js" defer></script>
 </head>
 <body>
   <main class="wrapper">
@@ -53,9 +53,14 @@
         <input id="student" name="student" type="text" pattern="^\d{9}$"/>
       </div>
 
+      <div id="PContainer" class="field full" hidden>
+        <label for="guest">Promo Code</label>
+        <input id="guest" name="guest" type="text" pattern="^\d{9}$"/>
+      </div>
+
       <button class="full" type="submit">Create Ticket</button>
     </form>
-
+    
     <section id="output" aria-live="polite"></section>
   </main>
 </body>

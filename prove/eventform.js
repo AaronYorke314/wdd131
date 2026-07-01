@@ -1,21 +1,31 @@
 
 const form = document.querySelector("#fsyForm");
 const travelRange = document.querySelector("#travelRange");
-const notesContainer = document.querySelector("#notesContainer");
-const notes = document.querySelector("#notes");
+const IDContainer = document.querySelector("#IDContainer");
+const PContainer = document.querySelector("#PContainer");
+const student = document.querySelector("#student");
+const guest = document.querySelector("#guest");
 const output = document.querySelector("#output");
-const campusBoxes = document.querySelectorAll('input[name="campus"]');
 
 function updateNotesField() {
   const value = travelRange.value;
   
   // Show the travel notes on the form if they are choosing many campuses and require it
-  if (value === 'many') {
+  if (value === 'student') {
     IDContainer.hidden = false;
-    student.required = true;
-  } else {
+    student.required = false;
+    PContainer.hidden = true;
+    guest.required = false;
+  } else if (value === 'guest'){
     IDContainer.hidden = true;
     student.required = false;
+    PContainer.hidden = false;
+    guest.required = false;
+  } else {
+    IDContainer.hidden = true;
+    PContainer.hidden = true;
+    student.required = false;
+    guest.required = false;
   }
 }
 
@@ -30,13 +40,6 @@ function isPastDate(value) {
   return chosen < today;
 }
 
-function getSelectedCampuses() {
-  //.from converts a NodeList into a real array, so then you can use .filter and .map
-  return Array.from(campusBoxes)
-    .filter(box => box.checked)
-    .map(box => box.value); 
-}
-
 form.addEventListener("submit", function (event) {
   event.preventDefault();
   output.textContent = "";
@@ -46,25 +49,11 @@ form.addEventListener("submit", function (event) {
   const email = form.email.value.trim();
   const type = form.travelRange.value;
   const availableDate = form.availableDate.value;
-  const selectedCampuses = getSelectedCampuses();
   const note = form.notes.value.trim();
-
-  // Validate the input
-  // Let the user know to select at least one campus
-  if (selectedCampuses.length === 0) {
-    output.textContent = 'Please choose at least one campus...';
-    return;
-  }
   
   // Let the user know if they choose many campuses but didn't put a note that they need to add a note
-  if (type == 'many' && !notes) {
-    output.textContent = 'Please add a travel note. Tell us how you will teleport so we can copy it.';
-    return;
-  }
-  
-  //Let the user know if they choose many campus but only had one campus selected that they need to choose at least two campuses
-  if (type == 'many' && selectedCampuses.length < 2) {
-    output.textContent = 'Please select at least two campuses.';
+  if (type == 'student' && !student) {
+    output.textContent = 'Please Fill Out the Student ID';
     return;
   }
 
@@ -72,16 +61,15 @@ form.addEventListener("submit", function (event) {
     output.textContent = "Please choose a later date.";
   }
 
+  
+
   output.innerHTML = `
-  <h2>Preference Submitted</h2>
+  <h2>Ticket Created</h2>
   <p>${firstName} ${lastName}</p>
-  <p>Email: ${email}</p>
-  <p>Availability: ${availableDate}</p>
-  <p>Campuses: ${selectedCampuses.join(", ")}</p>
-  <p>Preference Level: ${type}</p>
+  <p>Date: ${availableDate}</p>
+  <p>Clearance: ${type}</p>
   `;
 
   form.reset();
   updateNotesField();
 });
-          
