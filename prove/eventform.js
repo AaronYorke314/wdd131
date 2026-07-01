@@ -48,17 +48,22 @@ form.addEventListener("submit", function (event) {
   const lastName = form.lastName.value.trim();
   const email = form.email.value.trim();
   const type = form.travelRange.value;
-  const availableDate = form.availableDate.value;
-  const note = form.notes.value.trim();
+  const availableDate = form.EventDate.value;
   
   // Let the user know if they choose many campuses but didn't put a note that they need to add a note
-  if (type == 'student' && !student) {
-    output.textContent = 'Please Fill Out the Student ID';
+  if (type == 'student' && student.value.length !== 9) {
+    output.textContent = 'Please Fill Out the 9 digit Student ID';
+    return;
+  }
+
+  if (type == 'guest' && !guest.value.trim() !== 'EVENT131') {
+    output.textContent = 'Please Fill Out the Promo Code';
     return;
   }
 
   if (isPastDate(availableDate)) {
     output.textContent = "Please choose a later date.";
+    return
   }
 
   
