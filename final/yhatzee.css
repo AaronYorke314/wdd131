@@ -35,7 +35,7 @@ button:hover {
     grid-row: 2/3;
     grid-column: 1/4;
     justify-self: center;
-    width: 300px;
+    width: 80%;
     padding: 50px;
     margin-bottom: 50px;
 }
@@ -43,7 +43,7 @@ button:hover {
 #button1 {
     grid-column: 3/4;
     justify-self: left;
-    width: 300px;
+    width: 80%;
     align-self: center;
 }
 
@@ -51,7 +51,7 @@ label {
     grid-column: 1/2;
     grid-row: 1/2;
     text-align: center;
-    
+    width: 50%;
     align-self: center;
     border: 2px solid blue;
     background-color:aquamarine;
@@ -98,5 +98,14 @@ footer {
 }
     #search {
         width: 50%;
+    }
+    #button2 {
+        width: 300px;
+    }
+    #button1 {
+        width: 300px;
+    }
+    label {
+        width: 250px;
     }
 }
