@@ -50,8 +50,8 @@ let button2 = document.querySelector('#button2');
 let input = document.querySelector('#search');
 let button1 = document.querySelector('#button1')
 
-button2.addEventListener('click', display);
-button1.addEventListener('click', display2);
+button1.addEventListener('click', display);
+button2.addEventListener('click', display2);
 function display() {
     let dienum = input.value;
     if (dienum > 0) {
