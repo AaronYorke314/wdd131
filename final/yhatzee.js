@@ -61,6 +61,9 @@ function display() {
     } else {
         die.innerHTML = "<h2 id='error'>That Number is too big! please pick something smaller!</h2>"
     }
+    } else if (dienum.length == 0) {
+        die.innerHTML = ''
+        init(5)
     } else {
         die.innerHTML = "<h2 id='error'>Only positive, non-zero numbers are allowed!</h2>"
     }
