@@ -59,7 +59,7 @@ label {
 
 #search {
     height: 50px;
-    width: 100px;
+    width: 30%;
     justify-self: center;
     grid-column: 2/3;
     grid-row: 1/2;
@@ -67,7 +67,7 @@ label {
 }
 
 #dice {
-    width: 100px;
+    width: 20%;
     padding: 25px;
 }
 
@@ -88,9 +88,15 @@ footer {
     #error {
     grid-column: 1/6;
 }
-#holder {
+    #holder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 }
+    #dice {
+    width: 100px; 
+}
+    #search {
+        width: 50%;
+    }
 }
