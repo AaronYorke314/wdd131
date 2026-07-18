@@ -71,23 +71,26 @@ label {
     padding: 25px;
 }
 
-#die {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-
-#holder {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
-
 footer {
     background-color: aliceblue;
     width: 100%;
 }
 
 #error {
-    grid-column: 1/6;
     text-align: center;
+}
+
+@media (min-width: 600px) {
+    #die {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+    #error {
+    grid-column: 1/6;
+}
+#holder {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
 }
